@@ -193,9 +193,14 @@ p {
 }
 
 main {
+  display: flex;
+  align-items: center;
   height: 100vh;
   overflow-y: scroll;
-  padding: 30px 0;
+}
+
+.small-main {
+  display: block;
 }
 
 .container {
@@ -203,7 +208,7 @@ main {
   justify-content: center;
   gap: 10px;
   max-width: 1320px;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 0 60px;
 }
 

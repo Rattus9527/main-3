@@ -159,6 +159,18 @@ logBtn.addEventListener("click", () => {
 logArea.addEventListener("click", () => {
   logArea.classList.remove("show");
 });
+window.addEventListener("load", (e) => {
+  if (window.innerHeight <= 640) {
+    document.querySelector("main").classList.add("small-main");
+  }
+});
+window.addEventListener("resize", (e) => {
+  if (window.innerHeight <= 640) {
+    document.querySelector("main").classList.add("small-main");
+  } else {
+    document.querySelector("main").classList.remove("small-main");
+  }
+});
 
 function getRandomNum() {
   let num = Math.ceil(Math.random() * 5) - 3;
