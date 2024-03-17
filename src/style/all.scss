@@ -1,7 +1,197 @@
+@import "./reset";
+@import "./variable";
+@import "./mixin";
+
+/* font */
 @font-face {
   font-family: Cubic11;
   src: url(../font/Cubic_11_1.100_R.woff);
 }
 body {
-  font-family: Cubic11;
+  background-color: $main-bg;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+li,
+a,
+p {
+  font-family: Cubic11, sans-serif;
+  line-height: 1.8;
+  color: $main-text;
+}
+.mobile {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: $main-bg;
+  img {
+    width: 60%;
+  }
+  @include mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+main {
+  height: 100vh;
+  overflow: hidden;
+  padding: 30px 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  background-color: $main-bg;
+  cursor: pointer;
+  p {
+    position: absolute;
+  }
+}
+.text-area {
+  position: relative;
+  flex-shrink: 0;
+  max-width: 450px;
+  height: 640px;
+  padding: 20px 40px;
+  background-image: url("../img/主線UI/sen_normal.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  p {
+    margin: 20px 0;
+    font-size: 1.1rem;
+  }
+}
+.text {
+  display: none;
+}
+.text-box {
+  width: 370px;
+  max-height: 520px;
+  overflow-y: scroll;
+}
+.text-box::-webkit-scrollbar {
+  display: none;
+}
+.main-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  opacity: 0;
+  transition: 1s;
+  img {
+    width: 150px;
+  }
+}
+.mainbtn-group {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  opacity: 0;
+  transition: 1s;
+  img {
+    width: 120px;
+  }
+}
+.img-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 500px;
+  img {
+    width: 100%;
+  }
+}
+.btn-group {
+  display: flex;
+  justify-content: end;
+}
+.log {
+  display: none;
+  position: absolute;
+  left: 10%;
+  top: 50px;
+  width: 80%;
+  height: 600px;
+  padding: 40px 48px;
+  background-color: $main-text;
+  overflow-y: scroll;
+  p {
+    color: $main-bg;
+    margin: 10px 0;
+  }
+  &-btn {
+    align-self: start;
+  }
+}
+.log::-webkit-scrollbar {
+  display: none;
+}
+.blood {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/EP3/3-3-1爆炸特效.gif");
+  background-size: cover;
+  p {
+    display: block;
+    width: 800px;
+    color: #fff;
+  }
+  .shake {
+    display: inline-block;
+  }
+}
+
+.hint {
+  font-weight: 800;
+  cursor: pointer;
+  &:hover {
+    text-shadow: 0 0 3px #fff;
+  }
+}
+.clue {
+  display: none;
+}
+.text-show {
+  opacity: 1;
+}
+.blood-show {
+  display: flex;
+  animation: appear 1s ease-in;
+}
+.show {
+  display: block;
+  animation: appear 1s ease-in;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

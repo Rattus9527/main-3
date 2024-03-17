@@ -1,7 +1,368 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.container {
+  /* 設計稿的網格系統中，一個列寬是 60px */
+  /* 列與列之間的間隔寬度為 20px */
+  /* PC版本 */
+  /* max-width 960px = 60px*12 + 20px*11 + 10px*2(左右兩邊推gutter 的一半)*/
+  max-width: 960px; /* 共 960px */
+  margin: 0 auto; /*垂直置中*/
+  padding: 0 10px; /*gutter的一半= 20/2 =10 px*/
+  /* Pad 版*/
+}
+
+/* font */
 @font-face {
   font-family: Cubic11;
   src: url(../font/Cubic_11_1.100_R.woff);
 }
 body {
-  font-family: Cubic11;
+  background-color: #babe7c;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li,
+a,
+p {
+  font-family: Cubic11, sans-serif;
+  line-height: 1.8;
+  color: #2f2d22;
+}
+
+.mobile {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: #babe7c;
+}
+.mobile img {
+  width: 60%;
+}
+@media (max-width: 768px) {
+  .mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+main {
+  height: 100vh;
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  background-color: #babe7c;
+  cursor: pointer;
+}
+.btn p {
+  position: absolute;
+}
+
+.text-area {
+  position: relative;
+  flex-shrink: 0;
+  max-width: 450px;
+  height: 640px;
+  padding: 20px 40px;
+  background-image: url("../img/主線UI/sen_normal.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.text-area p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+.text {
+  display: none;
+}
+
+.text-box {
+  width: 370px;
+  max-height: 520px;
+  overflow-y: scroll;
+}
+
+.text-box::-webkit-scrollbar {
+  display: none;
+}
+
+.main-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  opacity: 0;
+  transition: 1s;
+}
+.main-btn img {
+  width: 150px;
+}
+
+.mainbtn-group {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  opacity: 0;
+  transition: 1s;
+}
+.mainbtn-group img {
+  width: 120px;
+}
+
+.img-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 500px;
+}
+.img-area img {
+  width: 100%;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: end;
+}
+
+.log {
+  display: none;
+  position: absolute;
+  left: 10%;
+  top: 50px;
+  width: 80%;
+  height: 600px;
+  padding: 40px 48px;
+  background-color: #2f2d22;
+  overflow-y: scroll;
+}
+.log p {
+  color: #babe7c;
+  margin: 10px 0;
+}
+.log-btn {
+  align-self: start;
+}
+
+.log::-webkit-scrollbar {
+  display: none;
+}
+
+.blood {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/EP3/3-3-1爆炸特效.gif");
+  background-size: cover;
+}
+.blood p {
+  display: block;
+  width: 800px;
+  color: #fff;
+}
+.blood .shake {
+  display: inline-block;
+}
+
+.hint {
+  font-weight: 800;
+  cursor: pointer;
+}
+.hint:hover {
+  text-shadow: 0 0 3px #fff;
+}
+
+.clue {
+  display: none;
+}
+
+.text-show {
+  opacity: 1;
+}
+
+.blood-show {
+  display: flex;
+  animation: appear 1s ease-in;
+}
+
+.show {
+  display: block;
+  animation: appear 1s ease-in;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=all.css.map */
