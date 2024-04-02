@@ -197,6 +197,7 @@ main {
   align-items: center;
   height: 100vh;
   overflow-y: scroll;
+  transition: 1s;
 }
 
 .small-main {
@@ -223,6 +224,10 @@ main {
 }
 .btn p {
   position: absolute;
+}
+
+.btn-list .btn {
+  margin-bottom: 10px;
 }
 
 .text-area {
@@ -255,23 +260,20 @@ main {
 }
 
 .main-btn {
+  display: none;
   position: absolute;
   bottom: 10px;
   right: 20px;
-  opacity: 0;
-  transition: 1s;
 }
 .main-btn img {
   width: 150px;
 }
 
 .mainbtn-group {
-  display: flex;
+  display: none;
   position: absolute;
   bottom: 10px;
   right: 20px;
-  opacity: 0;
-  transition: 1s;
 }
 .mainbtn-group img {
   width: 120px;
@@ -296,9 +298,9 @@ main {
   display: none;
   position: absolute;
   left: 10%;
-  top: 50px;
+  top: 5%;
   width: 80%;
-  height: 600px;
+  height: 90vh;
   padding: 40px 48px;
   background-color: #2f2d22;
   overflow-y: scroll;
@@ -309,6 +311,9 @@ main {
 }
 .log-btn {
   align-self: start;
+}
+.log hr {
+  color: #babe7c;
 }
 
 .log::-webkit-scrollbar {
@@ -337,6 +342,119 @@ main {
   display: inline-block;
 }
 
+.darkness {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+.darkness p {
+  color: #fff;
+}
+
+.battle {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: scroll;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+.battle .container {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-color: #1c1c17;
+  background-image: url(../img/BattleScene/BATTLE_base1.png);
+  background-size: cover;
+}
+.battle img {
+  position: absolute;
+}
+.battle-ui {
+  z-index: 3;
+  width: 800px;
+}
+.battle .down {
+  top: 0;
+}
+.battle-rule {
+  left: 0;
+  top: 340px;
+  z-index: 2;
+  width: 280px;
+}
+.battle-ship {
+  left: 0;
+  top: 180px;
+  width: 300px;
+}
+.battle-monstername {
+  left: 5px;
+  top: 5px;
+  width: 350px;
+}
+.battle-human {
+  left: 0;
+  top: 140px;
+  z-index: 1;
+  width: 180px;
+}
+.battle .monster {
+  right: 30px;
+  top: 80px;
+  width: 680px;
+}
+.battle .battle-name {
+  position: absolute;
+  left: 85px;
+  top: 37px;
+  z-index: 5;
+  color: #fff;
+}
+.battle .btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 20px;
+  top: 427px;
+  z-index: 7;
+  width: 185px;
+  height: 45px;
+  background-color: #1c1c17;
+  border: 1px solid #fff;
+}
+.battle .btn p {
+  color: #fff;
+  font-size: 24px;
+}
+
+.talk-effect {
+  opacity: 0.3;
+  animation: talk 10s linear;
+}
+.talk-effect p {
+  color: #fff;
+}
+
+.crystal {
+  animation: crystal 1s infinite;
+  color: #519585;
+  opacity: 1;
+}
+
 .hint {
   font-weight: 800;
   cursor: pointer;
@@ -349,11 +467,7 @@ main {
   display: none;
 }
 
-.text-show {
-  opacity: 1;
-}
-
-.blood-show {
+.btn-show {
   display: flex;
   animation: appear 1s ease-in;
 }
@@ -363,9 +477,84 @@ main {
   animation: appear 1s ease-in;
 }
 
+.special-animation {
+  color: #723030;
+  animation: turn 3s ease-in;
+}
+
+.dark-mode {
+  background-color: #19343a;
+}
+.dark-mode p {
+  color: #7d825a;
+}
+.dark-mode .text-area {
+  background-image: url("../img/主線UI/sen_BW_off.png");
+}
+.dark-mode .btn {
+  background-color: #19343a;
+}
+
+.darker-mode {
+  background-color: #000;
+}
+.darker-mode p {
+  color: #fff;
+}
+.darker-mode .text-area {
+  background-image: url("../img/主線UI/sen_BW.png");
+}
+.darker-mode .btn {
+  background-color: #000;
+}
+
+.blood-scene p {
+  color: #723030;
+}
+.blood-scene .text-area {
+  background-image: url("../img/主線UI/sen_blood.png");
+}
+
+.hidden {
+  display: none;
+}
+
 @keyframes appear {
   0% {
     opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes turn {
+  0% {
+    color: #2f2d22;
+  }
+  100% {
+    color: #723030;
+  }
+}
+@keyframes talk {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes crystal {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
   }
   100% {
     opacity: 1;

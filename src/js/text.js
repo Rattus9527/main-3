@@ -38,15 +38,15 @@ const text = {
     hint: [
       `<div class="mainbtn-group">
     <button class="btn">
-      <img src="src/img/主線UI/btn_sen_normal.png" alt="" / data-next="l_5">
+      <img src="src/img/主線UI/btn_sen_blood.png" alt="" / data-next="l_5">
       <p data-next="l_5">往左</p>
     </button>
     <button class="btn">
-      <img src="src/img/主線UI/btn_sen_normal.png" alt="" data-next="m_5"/>
+      <img src="src/img/主線UI/btn_sen_blood.png" alt="" data-next="m_5"/>
       <p data-next="m_5">往中</p>
     </button>
     <button class="btn">
-      <img src="src/img/主線UI/btn_sen_normal.png" alt="" data-next="r_5"/>
+      <img src="src/img/主線UI/btn_sen_blood.png" alt="" data-next="r_5"/>
       <p data-next="r_5">往右</p>
     </button>
   </div>`,
@@ -118,6 +118,130 @@ const text = {
       "離遠一點！依（DICE）數字大小決定被噴射物覆蓋的身體區域大小，1為無沾染，6為身體面積1/3，被覆蓋到的位置會散發出驚天地泣鬼神的腐臭味，並維持該數字天數才會自然消散。",
     ],
     btn: "",
+    hasEvent: true,
+  },
+  6: {
+    paragraphs: [
+      "你們幾乎就要衝出這場可怕的災難，將那片飄滿不明物體的暗紅海面拋在後頭，前方就是親切可愛的蔚藍海洋。全速前進帶起的風吹散了些令人作嘔的氣味，一道吟唱般的鳴叫劃破空氣，喚醒了不知何時停滯的思緒。你驚覺剛才數分鐘內，你的腦子裡只有一件事。",
+      "必須離開，離開這裡，越遠越好。",
+    ],
+    nextParagraphs: [
+      "你甚至無法注意到海上如此明顯的異常，四周的海水不知何時已變得近乎漆黑，像是有什麼匍匐在水面之下，望不到邊界的陰影壟罩著你們。",
+      `<span class="hint" data-next="black">［？］</span>`,
+    ],
+    hint: [],
+    pureText: [
+      "你甚至無法注意到海上如此明顯的異常，四周的海水不知何時已變得近乎漆黑，像是有什麼匍匐在水面之下，望不到邊界的陰影壟罩著你們。",
+      `<span class="hint" data-next="black">［？］</span>`,
+    ],
+    btn: "",
+    hasEvent: true,
+  },
+  black: {
+    paragraphs: "物體破水而出的聲音傳進腦子，巨大的牆壁從四周猛地竄起，然後",
+  },
+  b_next: {
+    paragraphs: [
+      "一片漆黑。",
+      "劇烈的顛簸讓你不得不抓緊任何觸手可及的東西來保持平衡，你幾乎以為船會就這麼翻覆，好在潘尼達絲似乎對你們不值錢的小命還不感興趣，你們溫馨的小船在暴風雨般的起落中堅強地衝出一條生路。一次重重地下墜後，濺起的水花如雨般淅淅瀝瀝落了下來，四周終於安靜下來。",
+      "伸手不見五指的黑暗包裹著你們，淡淡的腥味騷動著鼻腔，船隻似乎正平穩地行進著，你能聽見水波盪開的聲音，此外還有個若有似無的低頻響動幽幽纏繞著，但當屏息細聽時卻很難捕捉到它。不論如何，你們似乎總算是能夠稍微喘口氣了。",
+    ],
+    btn: "繼續航行",
+    next: 7,
+    hasEvent: false,
+  },
+  7: {
+    paragraphs: [],
+    crystalText: [
+      `黑暗中驟然出現的亮光是多麼誘人，你突然有點理解那些被燈籠魚吞下肚的獵物，那抹<span class="crystal">藍</span>靜靜地綻放，美好得讓人嚮往。湛<span class="crystal">藍</span>的<span class="crystal">星</span>點隨著深入逐漸密集，低頻的振動吟<span class="crystal">唱</span>著，讓人耳膜發癢，船前進的速度緩了下來，<span class="crystal">藍光</span>幽幽地點<span class="crystal">亮</span>了透不進<span class="crystal">光</span>的空間，你們逐漸看清了四<span class="crystal">周</span>。`,
+      `發光的<span class="crystal">藍</span>色晶礦成<span class="crystal">簇</span>的鑲在了濡濕的暗色肉壁上，隨著細小的氣流微微<span class="crystal">起伏</span>著。可以確定你們應該是被一隻難以想像的<span class="crystal">巨獸</span>一口吞入了腹中，牠體內的空間大得出奇，你們的船隻航行地毫不費力，這怪物似乎<span class="crystal">仗</span>著體型龐大就什麼都想來上一口，一些破敗的殘骸在下方的水面<span class="crystal">飄</span>著。`,
+      `先是細小的<span class="crystal">碎</span>屑，接著開始出現<span class="crystal">較大</span>的<span class="crystal">沉積物</span>，看著眼前斜著插在水中的桅杆，你明<span class="crystal">白</span>這肯定不是這隻<span class="crystal">怪物</span>第一次把船隻當<span class="crystal">零嘴</span>吞下。`,
+      `那道從你們深入<span class="crystal">魚腹</span>就混在<span class="crystal">低吟</span>裡的聲音，<span class="crystal">喃喃</span>低語著什麼，<span class="crystal">破碎</span>的字句隨著前<span class="crystal">進</span>愈發<span class="crystal">清晰</span>。`,
+      `<span class="crystal">聲音</span>從<span class="crystal">一個</span>黑暗的角落<span class="crystal">傳來</span>，你們必須非常靠近<span class="crystal">肉牆</span>才能稍微辨識出<span class="crystal">聲音</span>的<span class="crystal">來源</span>。`,
+      `那是一個人類，大概是。<br>他半<span class="crystal">個</span>身體埋在<span class="crystal">濕滑</span>的肉壁內，肢體不自然地<span class="crystal">扭曲</span>著，<span class="crystal">嘶啞</span>的嗓音不停呢喃著<span class="crystal">混亂</span>的話語，你沒辦法從<span class="crystal">凌亂</span>的鬍<span class="crystal">鬚</span>和頭髮中窺視到他的<span class="crystal">神情</span>，但從聲音和<span class="crystal">暴露</span>在外的<span class="crystal">軀</span>體來看，就算沒被<span class="crystal">鑲</span>在巨大海怪的<span class="crystal">體內</span>，他也<span class="crystal">應該</span>已經半隻腳踏入<span class="crystal">棺材</span>。<br>在<span class="crystal">你</span>們足夠<span class="crystal">靠近時</span>，<span class="crystal">囈語</span>的人猛然抬起頭，毛髮<span class="crystal">下</span>的一雙<span class="crystal">眼睛</span>映著<span class="crystal">藍光</sapn>。`,
+    ],
+    talk: [
+      "……我……",
+      "錯誤……孽……",
+      "……日……晶……出口",
+      "我們不該……錯了……報……",
+      "對……但不能……那條路是……可以……",
+      `<span class="crystal">「這件事從一開始就錯了。」他顫抖著說。</span>`,
+    ],
+    hint: [
+      `<button class="btn main-btn">
+    <img src="src/img/主線UI/btn_sen_off.png" alt="" data-next="8"/>
+    <p data-next="8">...?</p>
+</button>`,
+    ],
+    pureText: [
+      "黑暗中驟然出現的亮光是多麼誘人，你突然有點理解那些被燈籠魚吞下肚的獵物，那抹藍靜靜地綻放，美好得讓人嚮往。湛藍的星點隨著深入逐漸密集，低頻的振動吟唱著，讓人耳膜發癢，船前進的速度緩了下來，藍光幽幽地點亮了透不進光的空間，你們逐漸看清了四周。",
+      "「……我……」",
+      "發光的藍色晶礦成簇的鑲在了濡濕的暗色肉壁上，隨著細小的氣流微微起伏著。可以確定你們應該是被一隻難以想像的巨獸一口吞入了腹中，牠體內的空間大得出奇，你們的船隻航行地毫不費力，這怪物似乎仗著體型龐大就什麼都想來上一口，一些破敗的殘骸在下方的水面飄著。",
+      "「錯誤……孽……」",
+      "先是細小的碎屑，接著開始出現較大的沉積物，看著眼前斜著插在水中的桅杆，你明白這肯定不是這隻怪物第一次把船隻當零嘴吞下。",
+      "「……日……晶……出口」",
+      "那道從你們深入魚腹就混在低吟裡的聲音，喃喃低語著什麼，破碎的字句隨著前進愈發清晰。",
+      "「我們不該……錯了……報……」",
+      "聲音從一個黑暗的角落傳來，你們必須非常靠近肉牆才能稍微辨識出聲音的來源。",
+      "「對……但不能……那條路是……可以……」",
+      "那是一個人類，大概是。<br>他半個身體埋在濕滑的肉壁內，肢體不自然地扭曲著，嘶啞的嗓音不停呢喃著混亂的話語，你沒辦法從凌亂的鬍鬚和頭髮中窺視到他的神情，但從聲音和暴露在外的軀體來看，就算沒被鑲在巨大海怪的體內，他也應該已經半隻腳踏入棺材。<br>在你們足夠靠近時，囈語的人猛然抬起頭，毛髮下的一雙眼睛映著藍光。",
+      "「這件事從一開始就錯了。」他顫抖著說。",
+    ],
+    btn: "",
+    hasEvent: true,
+  },
+  8: {
+    paragraphs: [],
+    talk: [
+      `<p class="text hint" data-show="who">［你是誰？］<p>`,
+      `<p class="clue who">那人口部的鬍鬚顫了顫，不成句子的狀聲詞刮擦著你的耳朵。
+    「……一個罪人。」良久後他說。</p>`,
+      `<p class="text hint" data-show="why-here">［你為什麼在這裡？］</p>`,
+      `<p class="clue why-here">「祂很美吧？」那人注視著虛空，囈語般呢喃著，「祂是最完美的，我們的假想是對的，我對祂做的一切都——」他的嘴反覆開合，只吐出了嘶嘶的氣音，眼珠不自然地滾動，「喔我的墨瑞瑪啊，我們都幹了什麼？」</p>`,
+      `<p class="text hint" data-show="why-this">［你怎麼會變成這樣？］</p>`,
+      `<p class="clue why-this">那人一動不動地緊盯著發問的人，像是船前的雕像般死寂，然後古怪地嗤笑了聲。<br>「你也會的。」粗礪的笑聲刮擦著耳膜令人不適，他顫抖著還能控制的軀殼，上氣不接下氣地咳起嗽來，「它來者不拒。」他在喘息間斷斷續續吐出</p>`,
+      `<p class="text hint" data-show="what">［什麼事錯了？］</p>`,
+      `<p class="clue what">「什麼都錯了！」那人激動地瞪大死魚般渾濁的雙眼，你不確定他是否還能視物，「不該是這樣的，是我們不該窺探世界的真相嗎？這是懲罰嗎？為什麼？我們做錯了什麼？」淚水從他眼角的皺褶擠出，眼底的藍光盛放。<br>「啊哈、哈哈哈——這是我們自找的，活該、活該！」怪人上半身劇烈地扭動卻沒能移動半分，他情緒近乎癲狂，比起人類更像一頭瀕死的野獸。</p>`,
+      `<p class="text hint" data-show="how">［如何離開這裡？］</p>`,
+      `<p class="clue how">「你聽得懂祂們的語言嗎？」那人的身體晃了晃像是想做些什麼，但顯然無法達成，最後他只是向上翻了翻眼球，模樣可憐又可笑，「那條路只讓知曉的人通過，我永遠無法踏出我親手打造的出口，」他唸了串複雜繞口的音節，你有聽沒有懂，「哈、這是祂的詛咒，我太晚才明白了。」</p>`,
+    ],
+    hint: [
+      `<button class="btn main-btn">
+    <img src="src/img/主線UI/btn_sen_off.png" alt="" data-next="9"/>
+    <p data-next="9">沒什麼好說的</p>
+  </button>`,
+    ],
+    pureText: [
+      `［你是誰？］`,
+      `那人口部的鬍鬚顫了顫，不成句子的狀聲詞刮擦著你的耳朵。<br>「……一個罪人。」良久後他說。`,
+      `［你為什麼在這裡？］`,
+      `「祂很美吧？」那人注視著虛空，囈語般呢喃著，「祂是最完美的，我們的假想是對的，我對祂做的一切都——」他的嘴反覆開合，只吐出了嘶嘶的氣音，眼珠不自然地滾動，「喔我的墨瑞瑪啊，我們都幹了什麼？」`,
+      `你怎麼會變成這樣？］`,
+      `那人一動不動地緊盯著發問的人，像是船前的雕像般死寂，然後古怪地嗤笑了聲。<br>「你也會的。」粗礪的笑聲刮擦著耳膜令人不適，他顫抖著還能控制的軀殼，上氣不接下氣地咳起嗽來，「它來者不拒。」他在喘息間斷斷續續吐出`,
+      `［什麼事錯了？］`,
+      `什麼都錯了！」那人激動地瞪大死魚般渾濁的雙眼，你不確定他是否還能視物，「不該是這樣的，是我們不該窺探世界的真相嗎？這是懲罰嗎？為什麼？我們做錯了什麼？」淚水從他眼角的皺褶擠出，眼底的藍光盛放。<br>「啊哈、哈哈哈——這是我們自找的，活該、活該！」怪人上半身劇烈地扭動卻沒能移動半分，他情緒近乎癲狂，比起人類更像一頭瀕死的野獸。`,
+      `［如何離開這裡？］`,
+      `「你聽得懂祂們的語言嗎？」那人的身體晃了晃像是想做些什麼，但顯然無法達成，最後他只是向上翻了翻眼球，模樣可憐又可笑，「那條路只讓知曉的人通過，我永遠無法踏出我親手打造的出口，」他唸了串複雜繞口的音節，你有聽沒有懂，「哈、這是祂的詛咒，我太晚才明白了。」`,
+    ],
+    btn: "",
+    hasEvent: true,
+  },
+  9: {
+    paragraphs: [
+      "那人對你們大多數的問題都只給予了夢囈般的片段字句，出口、錯誤、罪孽幾個詞彙在他口中反覆，在數次問答後他陷入沉默，沒有焦距的目光緩慢地掃視過每個人的雙眼，古怪的喀咖聲從他喉中溢出，美麗的藍色安靜地包覆了那雙眼睛。",
+      "四周的肌肉緩慢地蠕動，一點一點將他吞沒，你們看見他咧開嘴角，凝固成一個過於工整的僵硬笑容，直到最後一根髮絲也消失無蹤，光滑的肉壁上剩下漾著藍色光芒的結晶，像是一個扭曲的人型。",
+      `<span class="hint" data-show="next">［喀咖］</span>。`,
+    ],
+    hint: [
+      `<p class="clue next">還未等你們從那詭譎的一幕中回神，船身突然開始劇烈擺盪，原本平靜如死水的體液掀起了波瀾，令人牙痠的擠壓聲從船的底部傳來，接著逐漸向上。<br><br>伴隨堅硬物體的撞擊聲，你們在難以站立的甲板上看到那剪刀狀的東西死死扣住船緣，兩顆透澈的藍色眼珠被眼柄托著悠晃地探了上來。<br>你從未聽聞過這副模樣的海怪，將近半船高的蟹狀生物揮舞著不成比例地巨大的螯，細長的足部將軀幹高高撐起，殼上成片的藍色晶體肆意生長，難以辨識它原先的形體，看似普通的揮擊都能讓船體發出令人頭皮發麻的巨響。<br>於此同時，後方也傳來了相同的聲響，天知道這個啥都吞的大王八蛋吃了多少這樣的鬼東西，藍色的幽光隨著它們移動而閃爍，將戰鬥的舞台徹底點亮。
+      </p>`,
+      `<button class="btn main-btn">
+      <img src="src/img/主線UI/btn_sen_normal.png" alt="" data-next="10"/>
+      <p data-next="10">進入戰鬥</p>
+    </button>`,
+    ],
+    pureText: [],
     hasEvent: true,
   },
 };
